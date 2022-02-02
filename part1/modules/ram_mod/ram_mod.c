@@ -13,9 +13,9 @@ MODULE_VERSION("0.01");
 static int writeFile(struct seq_file* archivo, void *v){
 
     seq_printf(archivo, "==========================\n");
-    seq_printf(archivo, "=             OS2        =\n");
-    seq_printf(archivo, "=          parobacal     =\n");
-    seq_printf(archivo, "=           ram_mod      =\n");
+    seq_printf(archivo, "=           OS2          =\n");
+    seq_printf(archivo, "=        parobacal       =\n");
+    seq_printf(archivo, "=         ram_mod        =\n");
     seq_printf(archivo, "==========================\n\n");
 
     return 0;
