@@ -8,6 +8,6 @@ clean:
 
 test:
 	sudo dmesg -C
- 	sudo insmod lkm_example.ko
- 	sudo rmmod lkm_example.ko
+ 	sudo insmod basic_mod.ko
+ 	sudo rmmod basic_mod.ko
  	dmesg
