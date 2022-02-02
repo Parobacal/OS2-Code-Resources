@@ -7,7 +7,7 @@ clean:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
 
 test:
- sudo dmesg -C
- sudo insmod lkm_example.ko
- sudo rmmod lkm_example.ko
- dmesg
+	sudo dmesg -C
+ 	sudo insmod lkm_example.ko
+ 	sudo rmmod lkm_example.ko
+ 	dmesg
