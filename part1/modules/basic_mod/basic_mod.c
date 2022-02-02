@@ -11,4 +11,4 @@ static void __exit remove_module(void) {
 }
 
 module_init(load_module);
-module_exit(unload_module);
+module_exit(remove_module);
