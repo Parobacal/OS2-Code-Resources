@@ -1,0 +1,13 @@
+# Instrucciones de ejecución
+- `cd [nombre del directorio]`
+  - Debemos situarnos en la carpeta donde este el archivo del módulo Kernel.
+- `make`
+  - Este comando compilará el objeto que definimos en el archivo Makefile
+- `sudo insmod [nombre_modulo].ko`
+  - Este comando nos perminte instalar el modulo en el Kernel.
+- `dmesg`
+  - Este comando nos muestra los mensajes en la consola del Kernel
+- `sudo rmmod [nombre del modulo]`
+  - Este comando nos permite remover el modulo del Kernel.
+- `cat /proc/[nombre_modulo]`
+  - Este comando nos permite abrir el archivo que colocamos dentro del directorio de procesos.
