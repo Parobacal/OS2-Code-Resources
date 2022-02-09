@@ -3,6 +3,7 @@
 #include <linux/module.h>
 #include <linux/init.h>
 #include <linux/mm.h>
+#include <linux/sched/signal.h>
 
 
 MODULE_LICENSE("GPL");
