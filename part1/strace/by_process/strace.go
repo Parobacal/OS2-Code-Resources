@@ -7,17 +7,24 @@ import (
 
 func main() {
 	var err error
+	var wstat syscall.WaitStatus
 	var regs syscall.PtraceRegs
 	var ss syscallCounter
 	ss = ss.init()
 
-	var pid = 1
+	var pid = 57076
 	exit := true
 
 	erx := syscall.PtraceAttach(pid)
 	if err != nil {
 		fmt.Print("Attach")
 		fmt.Print(erx)
+	}
+
+	_, err = syscall.Wait4(pid, &wstat, 0, nil)
+	if err != nil {
+		fmt.Printf("wait %d err %s\n", pid, err)
+		fmt.Println(err)
 	}
 
 	err = syscall.PtraceSetOptions(pid, syscall.PTRACE_O_TRACESYSGOOD)
