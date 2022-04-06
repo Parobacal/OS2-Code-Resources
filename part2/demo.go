@@ -24,10 +24,11 @@ type resultado struct {
 func main() {
 	jobs := make(chan trabajito, 100)
 	results := make(chan trabajito, 100)
+	for i:= 0; i < 5; i ++ {
 
 	//definimos nuestro scraper
-
-	go worker(jobs, results)
+		go worker(jobs, results)
+	}
 	//go worker(jobs, results)
 	//go worker(jobs, results)
 	//go worker(jobs, results)
