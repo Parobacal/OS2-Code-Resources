@@ -2,7 +2,7 @@ FROM node:lts-alpine AS builder
 
 WORKDIR /usr/src/app
 
-COPY new-app/package.json new-app/package-lock.json ./
+COPY /new-app/package.json new-app/package-lock.json ./
 RUN npm install
 
 COPY new-app .
