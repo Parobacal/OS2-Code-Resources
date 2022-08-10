@@ -26,9 +26,9 @@ static int atOpen(struct inode* inode, struct file* file){
     return single_open(file, writeFile, NULL);
 }
 
-static struct file_operations ops = {
-    .open = atOpen,
-    .read = seq_read
+static const struct proc_ops ops = {
+    .proc_open = atOpen,
+    .proc_read = seq_read
 };
 
 int proc_count(void)

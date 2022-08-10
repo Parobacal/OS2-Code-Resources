@@ -5,7 +5,7 @@ import (
 	"os"
 	"text/tabwriter"
 
-	"github.com/seccomp/libseccomp-golang"
+	sec "github.com/seccomp/libseccomp-golang"
 )
 
 type syscallCounter []int
@@ -30,7 +30,7 @@ func (s syscallCounter) print() {
 	w := tabwriter.NewWriter(os.Stdout, 0, 0, 8, ' ', tabwriter.AlignRight|tabwriter.Debug)
 	for k, v := range s {
 		if v > 0 {
-			name, _ := seccomp.ScmpSyscall(k).GetName()
+			name, _ := sec.ScmpSyscall(k).GetName()
 			fmt.Fprintf(w, "%d\t%s\n", v, name)
 		}
 	}
@@ -38,6 +38,6 @@ func (s syscallCounter) print() {
 }
 
 func (s syscallCounter) getName(syscallID uint64) string {
-	name, _ := seccomp.ScmpSyscall(syscallID).GetName()
+	name, _ := sec.ScmpSyscall(syscallID).GetName()
 	return name
 }
