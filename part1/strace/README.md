@@ -5,5 +5,4 @@
   - Ejemplo `go mod init strace`
 - `go mod tidy`
 - `go build .`
-- `./strace [comando a rastrear]`
-  - Ejemplo: `./strace echo test`
+- `./strace`
