@@ -1,5 +1,5 @@
 # OS2-Code-Resources
-Operative Systems 2. First semester of 2022.
+Operative Systems 2.
 
 ## Description
 This project consists on a group of examples useful for the course.
