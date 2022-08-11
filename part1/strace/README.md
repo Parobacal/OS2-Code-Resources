@@ -1,4 +1,5 @@
 # Instrucciones de ejecución:
+- `apt-get update`
 - `apt-get install libseccomp-dev pkg-config`
 - `go get github.com/seccomp/libseccomp-golang`
 - `go mod init [nombre del modulo golang]`
